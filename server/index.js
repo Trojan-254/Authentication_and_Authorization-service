@@ -10,7 +10,7 @@ const authRouter = require('./routes/auth');
 port = 3000;
 
 /* Middlewares */
-
+app.use(express.json());
 app.use('/api/auth', authRouter);
 
 /* Database connection */
