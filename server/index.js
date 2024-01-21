@@ -16,7 +16,7 @@ app.use('/api/auth', authRouter);
 /* Database connection */
 
 mongoose.connect(process.env.MONGO_URL)
-.then(() => console.log("Database connection succesfull...!"))
+.then(() => console.log("MongoDb connection succesfull...!"))
 .catch((err) => {
     console.log(err);
 });
@@ -24,5 +24,5 @@ mongoose.connect(process.env.MONGO_URL)
 /* Backend server connection */
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server is up and running on port ${port}...`)
+    console.log(`Backend server is up and running on port ${port}...`)
 })
